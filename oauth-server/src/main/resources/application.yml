@@ -1,0 +1,23 @@
+server:
+  port: 9401
+spring:
+  application:
+    name: oauth-server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 10.221.11.133:8848
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://10.221.18.16:16033/integration?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: 4rfv3edc!
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+security:
+  oauth2:
+    resource:
+      id: oauth
